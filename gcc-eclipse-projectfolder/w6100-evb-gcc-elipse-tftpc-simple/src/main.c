@@ -248,14 +248,8 @@ main(int argc, char* argv[])
 	{
 		int tmpTime;
 
-		loopback_udps(0,ethBuf0,50000,AS_IPV4);
-//		loopback_udps(1,ethBuf1,50001,AS_IPV6);
-//		loopback_udps(2,ethBuf2,50002,AS_IPDUAL);
-//		loopback_tcps(3,ethBuf3,50003,AS_IPV4);
-//		loopback_tcps(4,ethBuf4,50004,AS_IPV6);
-//		loopback_tcps(5,ethBuf5,50005,AS_IPDUAL);
-//		loopback_tcpc(6,ethBuf6,svr_ipv4,50006,AS_IPV4);
-//		loopback_tcpc(7,ethBuf7,svr_ipv6,50007,AS_IPV6);
+		tftpc(0, svr_ipv4, "test.md", AS_IPV4);
+		tftpc(1, svr_ipv6, "test.md", AS_IPV6);
 
 		if((tmpTime = getDevtime()) != currTime)
 		{

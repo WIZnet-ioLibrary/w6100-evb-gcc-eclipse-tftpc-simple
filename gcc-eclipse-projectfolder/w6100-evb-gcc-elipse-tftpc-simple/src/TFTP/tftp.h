@@ -69,6 +69,10 @@ extern int dbg_level;
 #define MAX_MTU_SIZE			1514
 #define FILE_NAME_SIZE			20
 
+
+#define mode_dual	"Dual IP mode"
+#define mode_v4		"IPv4 mode"
+#define mode_v6		"IPv6 mode"
 //#define __TFTP_DEBUG__
 
 /* typedef */ 

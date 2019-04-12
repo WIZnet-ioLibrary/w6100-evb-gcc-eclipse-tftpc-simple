@@ -60,13 +60,13 @@ void tftpc(uint8_t sn, uint8_t *server_ip, uint8_t *filename, uint8_t ip_mode)
 
 	if(ip_mode == AS_IPV4)
 	{
-		mode_msg = (uint8_t *)msg_v4;
+		mode_msg = (uint8_t *)mode_v4;
 	}else if(ip_mode == AS_IPV6)
 	{
-		mode_msg = (uint8_t *)msg_v6;
+		mode_msg = (uint8_t *)mode_v6;
 	}else
 	{
-		mode_msg = (uint8_t *)msg_dual;
+		mode_msg = (uint8_t *)mode_dual;
 	}
 
 	getsockopt(sn, SO_STATUS,&status);
@@ -157,7 +157,7 @@ void tftpc(uint8_t sn, uint8_t *server_ip, uint8_t *filename, uint8_t ip_mode)
 					uint8_t* option_startaddr = (uint8_t*)(buf + 2);
 					while(option_startaddr < buf + ret )
 					{
-						printf("optoin_startaddr : %0x, buf + ret : %x\r\n", option_startaddr, (buf + ret));
+						printf("optoin_startaddr : %0x, buf + ret : %x\r\n", (unsigned int)option_startaddr, (unsigned int)(buf + ret));
 						TFTP_OPTION option;
 						option.name = option_startaddr;
 						option_startaddr += (strlen(option.name) + 1);
