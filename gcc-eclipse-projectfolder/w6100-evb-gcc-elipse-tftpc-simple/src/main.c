@@ -185,7 +185,7 @@ main(int argc, char* argv[])
   Timer_Configuration();
 
 
-  printf("System clock: %ld Hz\n", SystemCoreClock);
+  printf("System clock: %ld Hz\r\n", SystemCoreClock);
 
 
 
@@ -197,6 +197,7 @@ main(int argc, char* argv[])
 						0xea, 0xf4, 0xf4, 0x2d};
 
   uint16_t version;
+  uint8_t phylink;
 
 #if _WIZCHIP_IO_MODE_ & _WIZCHIP_IO_MODE_SPI_
 	/* SPI method callback registration */
@@ -238,6 +239,14 @@ main(int argc, char* argv[])
 
 	print_network_information();
 
+	while(1)
+	{
+		ctlwizchip(CW_GET_PHYLINK, &phylink);
+		if(phylink == 1)
+			break;
+		delay(1);
+	}
+
 	setDevtime(0);
 
 	int currTime = 0;
@@ -251,19 +260,6 @@ main(int argc, char* argv[])
 		tftpc(0, svr_ipv4, "test.md", AS_IPV4);
 		tftpc(1, svr_ipv6, "test.md", AS_IPV6);
 
-		if((tmpTime = getDevtime()) != currTime)
-		{
-			currTime = tmpTime;
-			if(is_off)
-			{
-				blink_led_on();
-				is_off = 0;
-			}else
-			{
-				blink_led_off();
-				is_off = 1;
-			}
-		}
 	}
   // Infinite loop, never return.
 }
@@ -292,7 +288,7 @@ void print_network_information(void)
     		((uint16_t)tmp_array[6] << 8) | ((uint16_t)tmp_array[7]));
     printf(":%04X:%04X", ((uint16_t)tmp_array[8] << 8) | ((uint16_t)tmp_array[9]),
     		((uint16_t)tmp_array[10] << 8) | ((uint16_t)tmp_array[11]));
-    printf(":%04X:%04X\r\n ", ((uint16_t)tmp_array[12] << 8) | ((uint16_t)tmp_array[13]),
+    printf(":%04X:%04X\r\n", ((uint16_t)tmp_array[12] << 8) | ((uint16_t)tmp_array[13]),
     		((uint16_t)tmp_array[14] << 8) | ((uint16_t)tmp_array[15]));
 
 	getLLAR(tmp_array);

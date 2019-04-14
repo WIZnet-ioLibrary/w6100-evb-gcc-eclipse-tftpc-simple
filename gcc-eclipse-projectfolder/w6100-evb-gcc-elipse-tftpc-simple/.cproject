@@ -151,23 +151,21 @@
                                     									
                                     <listOptionValue builtIn="false" value="&quot;../system/include/stm32f1-stdperiph&quot;"/>
                                     									
-                                    <listOptionValue builtIn="false" value="&quot;C:\workspace\test_workspace\w6100-evb-gcc-eclipse-tftpc-simple\io6Library&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;C:\workspace\test_workspace\w6100-evb-gcc-eclipse-tftpc-simple\io6Library\Ethernet&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;C:\workspace\test_workspace\w6100-evb-gcc-eclipse-tftpc-simple\io6Library\Ethernet\W6100&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;C:\workspace\test_workspace\w6100-evb-gcc-eclipse-tftpc-simple\io6Library\Application&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;C:\workspace\test_workspace\w6100-evb-gcc-eclipse-tftpc-simple\io6Library\Application\loopback&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;C:\workspace\test_workspace\w6100-evb-gcc-eclipse-tftpc-simple\io6Library\Internet\DHCP6&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;C:\workspace\test_workspace\w6100-evb-gcc-eclipse-tftpc-simple\io6Library\Internet\DNS&quot;"/>
-                                    									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/W6100-evb-gcc-eclipse-tftpc-simple/src/PlatformHandler}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/W6100-evb-gcc-eclipse-tftpc-simple/src/TFTP}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/W6100-evb-gcc-eclipse-tftpc-simple/io6Library/Application}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/W6100-evb-gcc-eclipse-tftpc-simple/io6Library/Application/loopback}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/W6100-evb-gcc-eclipse-tftpc-simple/io6Library/Ethernet}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/W6100-evb-gcc-eclipse-tftpc-simple/io6Library/Ethernet/W6100}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/W6100-evb-gcc-eclipse-tftpc-simple/io6Library/Internet/DHCP6}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/W6100-evb-gcc-eclipse-tftpc-simple/io6Library/Internet/DNS}&quot;"/>
                                     								
                                 </option>
                                 								
